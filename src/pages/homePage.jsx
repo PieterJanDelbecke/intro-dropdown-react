@@ -1,5 +1,6 @@
 import NavBar from "../components/menuBar"
-// import { ReactComponent as ImageBrowser} from  
+import imageDesktop from '../imagesSvg/image-hero-desktop.png'
+
 
 const HomePage = () => {
     return (
@@ -10,7 +11,7 @@ const HomePage = () => {
                 Get your team in sync, no matter your location.
                 Streamline processes, create tean rituals, and watch productivity.
             </p>
-
+            <img src={imageDesktop} alt='desktop' />
             <button>Learn More</button>
         </>
     )
