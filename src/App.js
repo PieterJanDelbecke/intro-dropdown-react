@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import HomePage from "./pages/homePage";
 import GlobalStyles from "./styles/GlobalStyles";
+import ToDoListPage from "./pages/toDoListPage";
 
 const Container = styled.div`
   width: 1440px;
@@ -19,6 +20,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="todolist" element={<ToDoListPage />} />
           </Routes>
         </BrowserRouter>
       </Container>
