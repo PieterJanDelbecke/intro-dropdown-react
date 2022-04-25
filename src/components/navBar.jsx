@@ -1,7 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import Logo from "../imagesSvg/logo.svg";
 import FeaturesList from "./featuresList";
+import CompanyList from "./companyList";
 
 const ALMOST_WHITE = "hsl(0, 0%, 98%)";
 const MEDIUM_GREY = "hsl(0, 0%, 41%)";
@@ -41,26 +43,50 @@ const ButtonRight = styled.button`
 `;
 
 const FeatureListDiv = styled.div`
-position: absolute;
-left: 62px;
-background-color:white;
-`
+  position: absolute;
+  left: 62px;
+  background-color: white;
+`;
+
+const CompanyListDiv = styled.div`
+  position: absolute;
+  left: 220px;
+  background-color: white;
+`;
 
 const NavBar = () => {
+  const [featuresBtn, setFeaturesBtn] = useState(false);
+  const [companyBtn, setCompanyBtn] = useState(false);
+
+  const handleFeaturesClick = () => {
+    setFeaturesBtn(featuresBtn === false ? true : false);
+  };
+
+  const handleCompanyClick = () => {
+    setCompanyBtn(companyBtn === false ? true : false);
+  };
+
   return (
     <>
       <NavBarDiv>
         <SnapLogo src={Logo} alt="Logo" />
-        <Button>Featuring</Button>
-        <Button>Company</Button>
+        <Button onClick={handleFeaturesClick}>Features</Button>
+        <Button onClick={handleCompanyClick}>Company</Button>
         <Button>Careers</Button>
         <Button>About</Button>
         <ButtonRight>Login</ButtonRight>
         <ButtonRight>Register</ButtonRight>
       </NavBarDiv>
-      <FeatureListDiv>
-        <FeaturesList />
-      </FeatureListDiv>
+      {featuresBtn && (
+        <FeatureListDiv>
+          <FeaturesList />
+        </FeatureListDiv>
+      )}
+      {companyBtn && (
+        <CompanyListDiv>
+          <CompanyList />
+        </CompanyListDiv>
+      )}
     </>
   );
 };
