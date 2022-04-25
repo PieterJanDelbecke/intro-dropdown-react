@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import HomePage from "./pages/homePage";
+import GlobalStyles from "./styles/GlobalStyles";
 
 const Container = styled.div`
   width: 1440px;
@@ -13,6 +14,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <GlobalStyles />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
