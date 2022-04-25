@@ -9,18 +9,20 @@ const Container = styled.div`
   height: 100vh;
   border: 1px black solid;
   margin: 0px auto;
-`
+`;
 
 function App() {
   return (
-    <Container>
+    <>
+      <Container>
       <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </BrowserRouter>
-    </Container>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </BrowserRouter>
+      </Container>
+    </>
   );
 }
 
