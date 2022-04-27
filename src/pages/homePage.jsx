@@ -33,6 +33,7 @@ const Img = styled.img`
 `;
 
 const Button = styled.button`
+    margin: 80px 0 0;
   display: block;
   width: 120px;
   background-color: ${ALMOST_BLACK};
@@ -48,20 +49,32 @@ const Button = styled.button`
   }
 `;
 
-
 const TitleTop = styled.h1`
-  margin: 120px 0px 0px;
+  margin: 150px 0 0;
   font-size: 60px;
 `;
 const TitleBottom = styled.h1`
   font-size: 60px;
-  margin: 0px;
+  margin: 0;
 `;
 
 const Text = styled.p`
-  margin: 40px 0px;
+  margin: 70px 0 0;
   width: 85%;
   color: hsl(0, 0%, 41%);
+`;
+
+const LogoSmlDiv = styled.div`
+margin: 135px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: 1px solid yellow;
+`;
+const LogoDiv = styled.div``;
+const LogoSml = styled.img`
+  border: solid red 1px;
+  display: inline-block;
 `;
 
 const HomePage = () => {
@@ -77,10 +90,20 @@ const HomePage = () => {
             processes, create team rituals, and watch productivity soar.
           </Text>
           <Button>Learn More</Button>
-          <img src={databizImg} alt="databix" />
-          <img src={audiophileImg} alt="audiophile" />
-          <img src={meetImg} alt="meet" />
-          <img src={makerImg} alt="maker" />
+          <LogoSmlDiv>
+            <LogoDiv>
+              <LogoSml src={databizImg} alt="databix" />
+            </LogoDiv>
+            <LogoDiv>
+              <LogoSml src={audiophileImg} alt="audiophile" />
+            </LogoDiv>
+            <LogoDiv>
+              <LogoSml src={meetImg} alt="meet" />
+            </LogoDiv>
+            <LogoDiv>
+              <LogoSml src={makerImg} alt="maker" />
+            </LogoDiv>
+          </LogoSmlDiv>
         </TextDiv>
         <ImgDiv>
           <Img src={imageDesktop} alt="desktop" />
