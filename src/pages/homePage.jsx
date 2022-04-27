@@ -8,39 +8,51 @@ import meetImg from "../imagesSvg/client-meet.svg";
 import makerImg from "../imagesSvg/client-maker.svg";
 
 const MainDiv = styled.div`
-  margin: 0px auto;
+margin: 0px auto;
   border: solid green 1px;
   width: 85%;
+  display: flex;
+  justify-content: space-around;
 `;
 const TextDiv = styled.div`
-width: 420px;
-height: 560px;
+width: 500px;
   border: red 1px solid;
-  display: inline-block;
+  display: block;
 `;
 const ImgDiv = styled.div`
   border: orange solid 1px;
-  width: 500px;
-  display: inline-block;
+  display: block;
 `;
 
 const Img = styled.img`
   margin: 20px auto 0px;
-  width: 420px;
+  width: 500px;
 `;
 
+const Button = styled.button`
+    display: block;
+`
+const TitleTop = styled.h1`
+    margin: 120px 0px 0px;
+    font-size: 40px;
+`
+const TitleBottom = styled.h1`
+    font-size: 40px;
+    margin: 0px;
+`
 const HomePage = () => {
   return (
     <>
       <NavBar />
       <MainDiv>
         <TextDiv>
-          <h1>Make remote work home</h1>
+          <TitleTop>Make</TitleTop>
+          <TitleBottom>remote work</TitleBottom>
           <p>
             Get your team in sync, no matter your location. Streamline
             processes, create tean rituals, and watch productivity.
           </p>
-          <button>Learn More</button>
+          <Button>Learn More</Button>
           <img src={databizImg} alt="databix" />
           <img src={audiophileImg} alt="audiophile" />
           <img src={meetImg} alt="meet" />
