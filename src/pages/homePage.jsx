@@ -7,15 +7,18 @@ import audiophileImg from "../imagesSvg/client-audiophile.svg";
 import meetImg from "../imagesSvg/client-meet.svg";
 import makerImg from "../imagesSvg/client-maker.svg";
 
+const ALMOST_WHITE = "hsl(0, 0%, 98%)";
+const ALMOST_BLACK = "hsl(0, 0%, 8%)";
+
 const MainDiv = styled.div`
-margin: 0px auto;
+  margin: 0px auto;
   border: solid green 1px;
-  width: 85%;
+  width: 90%;
   display: flex;
   justify-content: space-around;
 `;
 const TextDiv = styled.div`
-width: 500px;
+  width: 500px;
   border: red 1px solid;
   display: block;
 `;
@@ -30,16 +33,37 @@ const Img = styled.img`
 `;
 
 const Button = styled.button`
-    display: block;
-`
+  display: block;
+  width: 120px;
+  background-color: ${ALMOST_BLACK};
+  color: ${ALMOST_WHITE};
+  border: ${ALMOST_BLACK} 1px solid;
+  border-radius: 8px;
+  padding: 8px 0px;
+  border: 1ps solid ${ALMOST_WHITE};
+  :hover {
+      color: ${ALMOST_BLACK};
+      background-color: ${ALMOST_WHITE};
+    }
+  }
+`;
+
+
 const TitleTop = styled.h1`
-    margin: 120px 0px 0px;
-    font-size: 40px;
-`
+  margin: 120px 0px 0px;
+  font-size: 60px;
+`;
 const TitleBottom = styled.h1`
-    font-size: 40px;
-    margin: 0px;
-`
+  font-size: 60px;
+  margin: 0px;
+`;
+
+const Text = styled.p`
+  margin: 40px 0px;
+  width: 85%;
+  color: hsl(0, 0%, 41%);
+`;
+
 const HomePage = () => {
   return (
     <>
@@ -48,10 +72,10 @@ const HomePage = () => {
         <TextDiv>
           <TitleTop>Make</TitleTop>
           <TitleBottom>remote work</TitleBottom>
-          <p>
+          <Text>
             Get your team in sync, no matter your location. Streamline
-            processes, create tean rituals, and watch productivity.
-          </p>
+            processes, create team rituals, and watch productivity soar.
+          </Text>
           <Button>Learn More</Button>
           <img src={databizImg} alt="databix" />
           <img src={audiophileImg} alt="audiophile" />
