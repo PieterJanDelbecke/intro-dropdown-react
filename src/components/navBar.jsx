@@ -30,12 +30,11 @@ const Button = styled.button`
 `;
 const ButtonRight = styled.button`
   width: 70px;
-  margin-right: 20px;
+  margin: 10px;
   border: 1px solid ${ALMOST_WHITE};
   padding: 6px 0px;
   background-color: ${ALMOST_WHITE};
-  position: relative;
-  left: 760px;
+  float: right;
   :hover {
     border: ${ALMOST_BLACK} 1px solid;
     border-radius: 8px;
